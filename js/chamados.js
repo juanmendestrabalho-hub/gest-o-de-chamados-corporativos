@@ -384,9 +384,13 @@ ticket.history.push({
 date:
 new Date().toLocaleString(),
 
+user:
+JSON.parse(
+localStorage.getItem("callflowSession")
+).name,
 
 action:
-"Chamado assumido pelo técnico"
+`Status alterado para ${ticket.status}`
 
 });
 
