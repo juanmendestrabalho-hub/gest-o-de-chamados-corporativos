@@ -503,7 +503,6 @@ document.getElementById("description").value="";
 // AUDITORIA
 // ===============================
 
-
 function createAudit(action){
 
 
@@ -512,15 +511,32 @@ getDatabase();
 
 
 
+const session =
+JSON.parse(
+localStorage.getItem("callflowSession")
+);
+
+
+
 db.audit.push({
 
+
 date:
-new Date().toLocaleString(),
+new Date()
+.toLocaleString(),
+
+
+user:
+session ?
+session.name :
+"Sistema",
 
 
 action
 
+
 });
+
 
 
 saveDatabase(db);
