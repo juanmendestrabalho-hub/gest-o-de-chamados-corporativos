@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+CallFlow - Chamados
+</title>
+
+
+<link rel="stylesheet" href="css/global.css">
+
+<link rel="stylesheet" href="css/tables.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+<aside class="sidebar">
+
+
+<h2>
+⚡ CallFlow
+</h2>
+
+
+<p class="subtitle">
+ITSM
+</p>
+
+
+
+<nav>
+
+<a href="dashboard.html">
+📊 Dashboard
+</a>
+
+
+<a href="chamados.html">
+🎫 Chamados
+</a>
+
+
+<a href="arquitetura.html">
+🏢 Arquitetura
+</a>
+
+
+<a href="sla.html">
+⏱ SLA
+</a>
+
+
+<a href="auditoria.html">
+📜 Auditoria
+</a>
+
+
+<a href="relatorios.html">
+📈 Relatórios
+</a>
+
+
+<button onclick="logout()">
+Sair
+</button>
+
+
+</nav>
+
+
+</aside>
+
+
+
+
+<main class="content">
+
+
+<header class="topbar">
+
+
+<h1>
+🎫 Gestão de Chamados
+</h1>
+
+
+<div id="userInfo">
+
+</div>
+
+
+</header>
+
+
+
+<section class="form-card">
+
+
+<h2>
+Novo Chamado
+</h2>
+
+
+
+<input 
+id="title"
+placeholder="Título do chamado"
+>
+
+
+
+<textarea 
+id="description"
+placeholder="Descrição do problema">
+</textarea>
+
+
+
+
+<select id="category">
+
+
+<option>
+Hardware
+</option>
+
+
+<option>
+Software
+</option>
+
+
+<option>
+Rede
+</option>
+
+
+<option>
+Acesso
+</option>
+
+
+<option>
+Sistemas
+</option>
+
+
+</select>
+
+
+
+
+
+<select id="impact">
+
+
+<option value="Baixo">
+Impacto Baixo
+</option>
+
+
+<option value="Médio">
+Impacto Médio
+</option>
+
+
+<option value="Alto">
+Impacto Alto
+</option>
+
+
+</select>
+
+
+
+
+
+<select id="urgency">
+
+
+<option value="Baixa">
+Urgência Baixa
+</option>
+
+
+<option value="Média">
+Urgência Média
+</option>
+
+
+<option value="Alta">
+Urgência Alta
+</option>
+
+
+</select>
+
+
+
+
+
+<select id="team">
+
+
+<option>
+Service Desk N1
+</option>
+
+
+<option>
+Infraestrutura
+</option>
+
+
+<option>
+Redes
+</option>
+
+
+</select>
+
+
+
+<button onclick="createTicket()">
+
+Criar Chamado
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+<section class="table-card">
+
+
+<h2>
+Chamados Registrados
+</h2>
+
+
+<input 
+id="search"
+placeholder="Pesquisar chamado..."
+onkeyup="filterTickets()"
+>
+
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Título</th>
+
+<th>Categoria</th>
+
+<th>Prioridade</th>
+
+<th>Status</th>
+
+<th>Ações</th>
+
+
+</tr>
+
+
+</thead>
+
+
+<tbody id="ticketTable">
+
+
+</tbody>
+
+
+</table>
+
+
+</section>
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+<script src="js/database.js"></script>
+
+<script src="js/auth.js"></script>
+
+<script src="js/chamados.js"></script>
+
+
+</body>
+
+
+</html>
