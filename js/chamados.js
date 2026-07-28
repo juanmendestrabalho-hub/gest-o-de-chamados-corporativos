@@ -79,7 +79,9 @@ priority,
 
 
 team:
-document.getElementById("team").value,
+routeTicket(
+document.getElementById("category").value
+),
 
 
 status:
@@ -484,8 +486,40 @@ saveDatabase(db);
 
 }
 
-
-
-
-
 loadTickets();
+
+function routeTicket(category){
+
+
+const routes={
+
+
+"Hardware":
+"Service Desk N1",
+
+
+"Software":
+"Service Desk N1",
+
+
+"Rede":
+"Redes",
+
+
+"Acesso":
+"Segurança",
+
+
+"Sistemas":
+"Infraestrutura"
+
+
+};
+
+
+
+return routes[category] ||
+"Service Desk N1";
+
+
+}
