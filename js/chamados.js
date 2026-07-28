@@ -585,3 +585,29 @@ return routes[category] ||
 
 
 }
+
+function suggestAI(){
+
+const text =
+document.getElementById("description").value;
+
+
+
+const result =
+analyzeTicket(text);
+
+
+
+document.getElementById("category").value =
+result.category;
+
+
+
+document.getElementById("team").value =
+result.team;
+
+
+
+alert("Sugestão aplicada pela IA");
+
+}
