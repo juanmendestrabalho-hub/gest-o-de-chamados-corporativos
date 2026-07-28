@@ -52,7 +52,49 @@ urgency
 
 const ticket = {
 
+  createdAt:
+new Date().toISOString(),
 
+
+slaDeadline:
+calculateDeadline(priority),
+
+function calculateDeadline(priority){
+
+
+const db =
+getDatabase();
+
+
+
+const rule =
+db.sla.find(
+s=>s.priority===priority
+);
+
+
+
+if(!rule)
+return null;
+
+
+
+let minutes =
+rule.solution;
+
+
+
+return new Date(
+
+Date.now()
++
+minutes*60000
+
+).toISOString();
+
+
+}
+  
 id:
 Date.now(),
 
