@@ -5,7 +5,6 @@ const db =
 getDatabase();
 
 
-
 const tickets =
 db.tickets;
 
