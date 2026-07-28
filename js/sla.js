@@ -76,3 +76,35 @@ ${item.solution} min
 
 
 loadSLA();
+
+
+function checkSLA(ticket){
+
+
+if(!ticket.slaDeadline)
+return "Sem SLA";
+
+
+
+const now =
+new Date();
+
+
+
+const deadline =
+new Date(
+ticket.slaDeadline
+);
+
+
+
+if(now > deadline){
+
+return "Estourado";
+
+}
+
+
+return "Dentro";
+
+}
