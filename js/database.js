@@ -55,38 +55,83 @@ role:"USER"
 
 tickets:[],
 
-
 teams:[
 
-{
 
+{
 id:1,
 
 name:"Service Desk N1",
 
-area:"Suporte"
+area:"Suporte",
+
+level:"N1",
+
+members:[
+
+"João",
+"Ana"
+
+]
 
 },
 
 
-{
 
+{
 id:2,
 
 name:"Infraestrutura",
 
-area:"Infra"
+area:"Infra",
+
+level:"N2",
+
+members:[
+
+"Carlos",
+"Marcos"
+
+]
 
 },
 
 
-{
 
+{
 id:3,
 
 name:"Redes",
 
-area:"Network"
+area:"Network",
+
+level:"N2",
+
+members:[
+
+"Pedro",
+"Lucas"
+
+]
+
+},
+
+
+
+{
+id:4,
+
+name:"Segurança",
+
+area:"Cyber",
+
+level:"N3",
+
+members:[
+
+"Fernanda"
+
+]
 
 }
 
