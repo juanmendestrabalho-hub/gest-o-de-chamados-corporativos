@@ -139,11 +139,10 @@ members:[
 ],
 
 
-
 sla:[
 
-{
 
+{
 priority:"Crítica",
 
 response:15,
@@ -154,12 +153,31 @@ solution:240
 
 
 {
-
 priority:"Alta",
 
 response:60,
 
 solution:480
+
+},
+
+
+{
+priority:"Média",
+
+response:240,
+
+solution:1440
+
+},
+
+
+{
+priority:"Baixa",
+
+response:480,
+
+solution:2880
 
 }
 
