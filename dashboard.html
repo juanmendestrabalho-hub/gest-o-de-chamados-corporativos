@@ -35,7 +35,7 @@ CallFlow Dashboard
 
 
 <h2>
-⚡ CallFlow
+CallFlow
 </h2>
 
 
@@ -49,32 +49,32 @@ ITSM
 
 
 <a href="dashboard.html">
-📊 Dashboard
+Dashboard
 </a>
 
 
 <a href="chamados.html">
-🎫 Chamados
+Chamados
 </a>
 
 
 <a href="arquitetura.html">
-🏢 Arquitetura
+ Arquitetura
 </a>
 
 
 <a href="sla.html">
-⏱ SLA
+ SLA
 </a>
 
 
 <a href="auditoria.html">
-📜 Auditoria
+ Auditoria
 </a>
 
 
 <a href="relatorios.html">
-📈 Relatórios
+ Relatórios
 </a>
 
 
@@ -100,9 +100,8 @@ Sair
 
 <header class="topbar">
 
-
 <h1>
-Dashboard
+ Dashboard Executivo
 </h1>
 
 
@@ -116,21 +115,137 @@ Dashboard
 
 
 
-<section class="welcome">
+<section class="metrics">
 
 
-<h2>
-Bem-vindo ao CallFlow
-</h2>
+<div class="metric-card">
+
+<h3>
+Total Chamados
+</h3>
+
+<strong id="totalTickets">
+0
+</strong>
+
+</div>
 
 
-<p>
-Sistema inteligente de arquitetura e gestão de chamados ITSM.
-</p>
+
+<div class="metric-card">
+
+<h3>
+Abertos
+</h3>
+
+<strong id="openTickets">
+0
+</strong>
+
+</div>
+
+
+
+<div class="metric-card">
+
+<h3>
+Em Atendimento
+</h3>
+
+<strong id="progressTickets">
+0
+</strong>
+
+</div>
+
+
+
+
+<div class="metric-card">
+
+<h3>
+Resolvidos
+</h3>
+
+<strong id="closedTickets">
+0
+</strong>
+
+</div>
+
+
+
+<div class="metric-card danger">
+
+<h3>
+SLA Estourado
+</h3>
+
+<strong id="slaExpired">
+0
+</strong>
+
+</div>
 
 
 </section>
 
+
+
+
+
+<section class="charts">
+
+
+<div class="chart-container">
+
+<h2>
+Chamados por Status
+</h2>
+
+
+<canvas id="statusChart"></canvas>
+
+
+</div>
+
+
+
+
+
+<div class="chart-container">
+
+<h2>
+Chamados por Prioridade
+</h2>
+
+
+<canvas id="priorityChart"></canvas>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<section class="summary">
+
+
+<h2>
+Resumo Operacional
+</h2>
+
+
+<div id="summaryText">
+
+</div>
+
+
+</section>
 
 
 </main>
